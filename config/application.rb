@@ -52,7 +52,6 @@ module Dritter
     config.assets.version = '1.0'
     
     config.sass.preferred_syntax = :sass
-    
-    end
+
   end
 end
