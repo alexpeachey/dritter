@@ -1,0 +1,2 @@
+module PostEntity
+end

@@ -1,0 +1,23 @@
+= form_for user, html: {class: 'form-stacked'} do |f|
+  -if user.errors.any?
+    #error_explanation
+      %span.label.important= "#{pluralize(user.errors.count, "error")} prohibited this user from being created:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li.error= msg
+  %fieldset
+    %legend= "Sign Up"
+    .field
+      = f.label :username
+      = f.text_field :username, required: true, class: 'span3'
+    .field
+      = f.label :email
+      = f.email_field :email, required: true, class: 'span3'
+    .field
+      = f.label :password
+      = f.password_field :password, required: true, class: 'span3'
+    .field
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, required: true, class: 'span3'
+  .actions
+    = f.submit 'Sign Up', class: 'btn primary', disable_with: 'Creating Account...'

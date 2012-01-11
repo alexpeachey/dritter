@@ -1,3 +1,55 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass here: http://sass-lang.com/
+.full_user
+  padding-bottom: 10px
+  margin-bottom: 10px
+  border-bottom: 1px solid #ccc
+  display: -webkit-box
+  -webkit-box-orient: horizontal
+  a.avatar_link
+    display: block
+  .user_details
+    display: block
+    padding-left: 5px
+    -webkit-box-flex: 1
+  img.avatar_image
+    border-radius: 5px
+  .user_stats
+    margin: 0px 10px
+    text-align: center
+    .user_stat
+      padding: 5px
+      h2, h3
+        font-size: 1em
+        margin: 0
+        padding: 0
+        line-height: 1em
+      h3
+        color: #aaa
+      a:hover
+        text-decoration: none
+        color: #3333aa
+        h2, h3
+          color: #3333aa
+    .dreets_count, .followings_count
+      border-bottom: 1px solid #ccc
+    .followers_count
+      -webkit-box-flex: 1
+
+.user_header
+  padding: 5px
+  margin-bottom: 10px
+  border: 1px solid #ccc
+  border-radius: 5px
+  .full_user
+    border: none
+    padding: 0
+    margin: 0
+
+.followings, .followers
+  min-height: 1000px
+  border: 1px solid #ccc
+  border-radius: 5px
+  h1
+    padding-bottom: 5px
+    text-indent: 10px
+    margin-bottom: 5px
+    border-bottom: 1px solid #ccc

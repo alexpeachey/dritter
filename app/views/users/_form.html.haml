@@ -6,26 +6,30 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :twitter
-    = f.text_field :twitter
-  .field
-    = f.label :facebook
-    = f.text_field :facebook
-  .field
-    = f.label :website
-    = f.text_field :website
-  .field
-    = f.label :tagline
-    = f.text_field :tagline
+  %fieldset
+    %legend= "Personal Information"
+    .field
+      = f.label :first_name
+      = f.text_field :first_name
+    .field
+      = f.label :last_name
+      = f.text_field :last_name
+    .field
+      = f.label :email
+      = f.text_field :email
+  %fieldset
+    %legend= "Internet Presence"
+    .field
+      = f.label :twitter
+      = f.text_field :twitter
+    .field
+      = f.label :facebook
+      = f.text_field :facebook
+    .field
+      = f.label :website
+      = f.text_field :website
+    .field
+      = f.label :tagline
+      = f.text_field :tagline
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', class: 'btn primary'

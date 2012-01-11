@@ -1,0 +1,9 @@
+.widget.session_widget
+  %ul.tabs{ data: { tabs: "tabs" } }
+    %li.active= link_to 'Sign In', '#sign_in'
+    %li= link_to 'Sign Up', '#sign_up'
+  .tab-content
+    #sign_in.active
+      = render 'sessions/form'
+    #sign_up
+      = render partial: 'users/sign_up_form', locals: { user: User.new }

@@ -1,0 +1,14 @@
+= form_tag sessions_path, method: :post, class: 'form-stacked' do
+  -if @errors.present?
+    #error_explanation
+      %span.label.important= @error
+  %fieldset
+    %legend= "Sign In"
+    .field
+      = label_tag :username
+      = text_field_tag :username, params[:username], class: 'span3'
+    .field
+      = label_tag :password
+      = password_field_tag :password, '', class: 'span3'
+  .actions
+    = submit_tag "Sign In", class: 'btn primary'

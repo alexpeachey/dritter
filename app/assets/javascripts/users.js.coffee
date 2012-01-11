@@ -1,3 +1,19 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+window.UsersController = class UsersController
+  constructor: ->
+    @wire_follow_button()
+  
+  
+  wire_follow_button: ->
+    if $('#unfollow_button').length > 0
+      $('#unfollow_button').live
+        mouseover: () ->
+          $(this).removeClass('success')
+          $(this).addClass('danger')
+          $(this).text('Unfollow')
+          $(this).val('Unfollow')
+        ,mouseout: () ->
+          $(this).removeClass('danger')
+          $(this).addClass('success')
+          $(this).text('Following')
+          $(this).val('Following')
+  

@@ -1,0 +1,11 @@
+.widget.user_widget
+  %header.user_header
+    = current_user.avatar
+    = current_user.display_name
+  %section.user_stats
+    .user_stat.dreets_count= current_user.dreets_count
+    .user_stat.followings_count= current_user.followings_count
+    .user_stat.followers_count= current_user.followers_count
+  %section.new_dreet
+    %h2= "New Dreet"
+    = render partial: 'posts/form', locals: { post: current_user.posts.new }

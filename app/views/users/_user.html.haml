@@ -1,0 +1,14 @@
+.full_user{ id: "user_#{user.id}"}
+  = user.avatar
+  .user_details
+    .display_name= user.display_name
+    = user.tagline
+    = user.twitter_link
+    = user.facebook_link
+    = user.website_link
+  .user_stats
+    .user_stat.dreets_count= user.dreets_count
+    .user_stat.followings_count= user.followings_count
+    .user_stat.followers_count= user.followers_count
+  .commands
+    = current_user.command_for_user(user)

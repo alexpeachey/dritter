@@ -14,9 +14,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_token
       t.datetime :password_token_expiration
       t.integer :flags, default: 0
-      t.integer :posts_count
-      t.integer :followers_count
-      t.integer :follows_count
+      t.integer :posts_count, default: 0
+      t.integer :followers_count, default: 0
+      t.integer :followings_count, default: 0
       t.datetime :last_seen_at
 
       t.timestamps
@@ -29,5 +29,6 @@ class CreateUsers < ActiveRecord::Migration
     add_index :users, [:password_token,:password_token_expiration]
     add_index :users, :flags
     add_index :users, :last_seen_at
+    add_index :users, :created_at
   end
 end
