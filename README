@@ -1,4 +1,4 @@
-== Dritter
+Dritter
 
 Dritter is a simplified Twitter app put together to show off how the Draper gem can be used to simplify views and keep logic where it belongs: in the code.
 
@@ -6,4 +6,6 @@ The idea is to better separate your concerns and keep your views light and as "d
 
 Draper can be found on github: https://github.com/jcasimir/draper
 
+A few slides for a presentation: http://www.slideshare.net/alexpeachey/draper-presentation
+After the slides the presentation uses code in this project to show various uses for Draper.
 
